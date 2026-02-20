@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="VSCode" type="device">
+  <diagram name="Software" id="sw-03">
+    <mxGraphModel dx="1600" dy="1100" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1500" pageHeight="1050" background="#050505">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <!-- Font loader (Google Fonts) -->
+        <mxCell id="font-loader" value="&lt;style&gt;@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;700');&lt;/style&gt;" style="text;html=1;strokeColor=none;fillColor=none;fontColor=none;fontSize=1;movable=0;resizable=0;deletable=0;editable=0;connectable=0;" parent="1" vertex="1">
+          <mxGeometry x="0" y="0" width="1" height="1" as="geometry" />
+        </mxCell>
+
+        <!-- Background fill -->
+        <mxCell id="bg" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#050505;strokeColor=none;movable=0;resizable=0;deletable=0;editable=0;connectable=0;" parent="1" vertex="1">
+          <mxGeometry x="0" y="0" width="1500" height="1050" as="geometry" />
+        </mxCell>
+
+        <!-- Title -->
+        <mxCell id="title" value="03 SOFTWARE" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontColor=#FFFFFF;fontSize=24;fontStyle=1;fontFamily=Barlow;letterSpacing=4;" parent="1" vertex="1">
+          <mxGeometry x="50" y="20" width="400" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="subtitle" value="ESP32 firmware modules, Docker services, and data pipeline" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontColor=#707070;fontSize=13;fontFamily=Barlow;letterSpacing=2;" parent="1" vertex="1">
+          <mxGeometry x="50" y="55" width="550" height="20" as="geometry" />
+        </mxCell>
+
+        <!-- ===== LEFT COLUMN: ESP32 Firmware ===== -->
+        <mxCell id="esp-header" value="ESP32 FIRMWARE — PLATFORMIO" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontColor=#555555;fontSize=11;fontStyle=1;fontFamily=Barlow;letterSpacing=3;" parent="1" vertex="1">
+          <mxGeometry x="50" y="95" width="350" height="20" as="geometry" />
+        </mxCell>
+
+        <!-- Entry Point -->
+        <mxCell id="grp-entry" value="ENTRY POINT" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontColor=#444444;fontSize=10;fontFamily=Barlow;letterSpacing=2;" parent="1" vertex="1">
+          <mxGeometry x="50" y="120" width="150" height="15" as="geometry" />
+        </mxCell>
+        <mxCell id="main-cpp" value="&lt;b&gt;main.cpp&lt;/b&gt;&lt;br&gt;&lt;font color=&quot;#CCCCCC&quot;&gt;setup() / loop() orchestration&lt;br&gt;Multi-target: AtomS3 (S3) + Core (ESP32)&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;arcSize=8;fillColor=#0A0A0A;strokeColor=#555555;fontColor=#FFFFFF;fontFamily=Barlow;fontSize=11;align=left;spacingLeft=12;verticalAlign=top;spacingTop=8;" parent="1" vertex="1">
+          <mxGeometry x="50" y="140" width="280" height="60" as="geometry" />
+        </mxCell>
+
+        <!-- Sensor Layer -->
+        <mxCell id="grp-sensor" value="SENSOR LAYER" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontColor=#444444;fontSize=10;fontFamily=Barlow;letterSpacing=2;" parent="1" vertex="1">
+          <mxGeometry x="50" y="215" width="150" height="15" as="geometry" />
+        </mxCell>
+        <mxCell id="sensor-mgr" value="&lt;b&gt;SensorManager&lt;/b&gt;&lt;br&gt;&lt;font color=&quot;#707070&quot;&gt;ENV + CO2 I2C&lt;br&gt;Auto-detect, validation&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;arcSize=6;fillColor=#0A0A0A;strokeColor=#333333;fontColor=#FFFFFF;fontFamily=Barlow;fontSize=10;align=left;spacingLeft=10;verticalAlign=top;spacingTop=6;" parent="1" vertex="1">
+          <mxGeometry x="50" y="235" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="renogy-mgr" value="&lt;b&gt;RenogyManager&lt;/b&gt;&lt;br&gt;&lt;font color=&quot;#707070&quot;&gt;RS485 Modbus RTU&lt;br&gt;3-block non-blocking&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;arcSize=6;fillColor=#0A0A0A;strokeColor=#333333;fontColor=#FFFFFF;fontFamily=Barlow;fontSize=10;align=left;spacingLeft=10;verticalAlign=top;spacingTop=6;" parent="1" vertex="1">
+          <mxGeometry x="220" y="235" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="kh140f-mgr" value="&lt;b&gt;KH140FManager&lt;/b&gt;&lt;br&gt;&lt;font color=&quot;#707070&quot;&gt;RS485 ASCII 115200bps&lt;br&gt;Core only&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;arcSize=6;fillColor=#0A0A0A;strokeColor=#333333;fontColor=#FFFFFF;fontFamily=Barlow;fontSize=10;align=left;spacingLeft=10;verticalAlign=top;spacingTop=6;" parent="1" vertex="1">
+          <mxGeometry x="390" y="235" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="vital-mgr" value="&lt;b&gt;VitalManager&lt;/b&gt;&lt;br&gt;&lt;font color=&quot;#707070&quot;&gt;UART Radar CSV&lt;br&gt;AtomS3 only&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;arcSize=6;fillColor=#0A0A0A;strokeColor=#333333;fontColor=#FFFFFF;fontFamily=Barlow;fontSize=10;align=left;spacingLeft=10;verticalAlign=top;spacingTop=6;" parent="1" vertex="1">
+          <mxGeometry x="560" y="235" width="140" height="60" as="geometry" />
+        </mxCell>
+
+        <!-- Application Layer -->
+        <mxCell id="grp-app" value="APPLICATION LAYER" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontColor=#444444;fontSize=10;fontFamily=Barlow;letterSpacing=2;" parent="1" vertex="1">
+          <mxGeometry x="50" y="315" width="200" height="15" as="geometry" />
+        </mxCell>
+        <mxCell id="mqtt-mgr" value="&lt;b&gt;MQTTManager&lt;/b&gt;&lt;br&gt;&lt;font color=&quot;#707070&quot;&gt;PubSubClient&lt;br&gt;WG deferral logic&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;arcSize=6;fillColor=#0A0A0A;strokeColor=#555555;fontColor=#FFFFFF;fontFamily=Barlow;fontSize=10;align=left;spacingLeft=10;verticalAlign=top;spacingTop=6;" parent="1" vertex="1">
+          <mxGeometry x="50" y="335" width="150" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="wg-mgr" value="&lt;b&gt;WireGuardManager&lt;/b&gt;&lt;br&gt;&lt;font color=&quot;#707070&quot;&gt;VPN state machine&lt;br&gt;OTA hook&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;arcSize=6;fillColor=#0A0A0A;strokeColor=#555555;fontColor=#FFFFFF;fontFamily=Barlow;fontSize=10;align=left;spacingLeft=10;verticalAlign=top;spacingTop=6;" parent="1" vertex="1">
+          <mxGeometry x="210" y="335" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="webserver" value="&lt;b&gt;WebServer&lt;/b&gt;&lt;br&gt;&lt;font color=&quot;#707070&quot;&gt;REST API + WebUI&lt;br&gt;Config + Log stream&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;arcSize=6;fillColor=#0A0A0A;strokeColor=#333333;fontColor=#FFFFFF;fontFamily=Barlow;fontSize=10;align=left;spacingLeft=10;verticalAlign=top;spacingTop=6;" parent="1" vertex="1">
+          <mxGeometry x="380" y="335" width="150" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ota-mgr" value="&lt;b&gt;OTAManager&lt;/b&gt;&lt;br&gt;&lt;font color=&quot;#707070&quot;&gt;Pull + Push OTA&lt;br&gt;HTTP manifest&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;arcSize=6;fillColor=#0A0A0A;strokeColor=#333333;fontColor=#FFFFFF;fontFamily=Barlow;fontSize=10;align=left;spacingLeft=10;verticalAlign=top;spacingTop=6;" parent="1" vertex="1">
+          <mxGeometry x="540" y="335" width="150" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="config-mgr" value="&lt;b&gt;ConfigManager&lt;/b&gt;&lt;br&gt;&lt;font color=&quot;#707070&quot;&gt;JSON + SecretStore&lt;br&gt;LittleFS + NVS&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;arcSize=6;fillColor=#0A0A0A;strokeColor=#333333;fontColor=#FFFFFF;fontFamily=Barlow;fontSize=10;align=left;spacingLeft=10;verticalAlign=top;spacingTop=6;" parent="1" vertex="1">
+          <mxGeometry x="50" y="405" width="150" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="display-mgr" value="&lt;b&gt;DisplayManager&lt;/b&gt;&lt;br&gt;&lt;font color=&quot;#707070&quot;&gt;LCD multi-page&lt;br&gt;M5Unified&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;arcSize=6;fillColor=#0A0A0A;strokeColor=#333333;fontColor=#FFFFFF;fontFamily=Barlow;fontSize=10;align=left;spacingLeft=10;verticalAlign=top;spacingTop=6;" parent="1" vertex="1">
+          <mxGeometry x="210" y="405" width="150" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="ntp-mgr" value="&lt;b&gt;NTPManager&lt;/b&gt;&lt;br&gt;&lt;font color=&quot;#707070&quot;&gt;Time sync&lt;br&gt;24h re-sync&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;arcSize=6;fillColor=#0A0A0A;strokeColor=#333333;fontColor=#FFFFFF;fontFamily=Barlow;fontSize=10;align=left;spacingLeft=10;verticalAlign=top;spacingTop=6;" parent="1" vertex="1">
+          <mxGeometry x="370" y="405" width="130" height="55" as="geometry" />
+        </mxCell>
+
+        <!-- Core Library -->
+        <mxCell id="grp-core" value="ESP32-CORE-LIB (SHARED LIBRARY)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontColor=#444444;fontSize=10;fontFamily=Barlow;letterSpacing=2;" parent="1" vertex="1">
+          <mxGeometry x="50" y="480" width="350" height="15" as="geometry" />
+        </mxCell>
+        <mxCell id="logger" value="&lt;b&gt;Logger&lt;/b&gt; &lt;font color=&quot;#444&quot;&gt;v0.2.1&lt;/font&gt;&lt;br&gt;&lt;font color=&quot;#707070&quot;&gt;Serial / UDP / WebUI&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;arcSize=6;fillColor=#080808;strokeColor=#222222;fontColor=#CCCCCC;fontFamily=Barlow;fontSize=10;align=left;spacingLeft=10;verticalAlign=top;spacingTop=6;" parent="1" vertex="1">
+          <mxGeometry x="50" y="500" width="150" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="config-base" value="&lt;b&gt;ConfigManagerBase&lt;/b&gt; &lt;font color=&quot;#444&quot;&gt;v0.3.0&lt;/font&gt;&lt;br&gt;&lt;font color=&quot;#707070&quot;&gt;Storage abstraction&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;arcSize=6;fillColor=#080808;strokeColor=#222222;fontColor=#CCCCCC;fontFamily=Barlow;fontSize=10;align=left;spacingLeft=10;verticalAlign=top;spacingTop=6;" parent="1" vertex="1">
+          <mxGeometry x="210" y="500" width="170" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="webserver-base" value="&lt;b&gt;WebServerBase&lt;/b&gt; &lt;font color=&quot;#444&quot;&gt;v0.4.0&lt;/font&gt;&lt;br&gt;&lt;font color=&quot;#707070&quot;&gt;AsyncWebServer&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;arcSize=6;fillColor=#080808;strokeColor=#222222;fontColor=#CCCCCC;fontFamily=Barlow;fontSize=10;align=left;spacingLeft=10;verticalAlign=top;spacingTop=6;" parent="1" vertex="1">
+          <mxGeometry x="390" y="500" width="155" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="wifi-core" value="&lt;b&gt;WiFiManagerCore&lt;/b&gt; &lt;font color=&quot;#444&quot;&gt;v0.5.1&lt;/font&gt;&lt;br&gt;&lt;font color=&quot;#707070&quot;&gt;AP/STA management&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;arcSize=6;fillColor=#080808;strokeColor=#222222;fontColor=#CCCCCC;fontFamily=Barlow;fontSize=10;align=left;spacingLeft=10;verticalAlign=top;spacingTop=6;" parent="1" vertex="1">
+          <mxGeometry x="555" y="500" width="160" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="wg-core" value="&lt;b&gt;WireGuardMgrCore&lt;/b&gt; &lt;font color=&quot;#444&quot;&gt;v0.6.0&lt;/font&gt;&lt;br&gt;&lt;font color=&quot;#707070&quot;&gt;VPN state machine&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;arcSize=6;fillColor=#080808;strokeColor=#222222;fontColor=#CCCCCC;fontFamily=Barlow;fontSize=10;align=left;spacingLeft=10;verticalAlign=top;spacingTop=6;" parent="1" vertex="1">
+          <mxGeometry x="50" y="555" width="170" height="45" as="geometry" />
+        </mxCell>
+
+        <!-- Key Dependencies -->
+        <mxCell id="grp-deps" value="KEY DEPENDENCIES" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontColor=#444444;fontSize=10;fontFamily=Barlow;letterSpacing=2;" parent="1" vertex="1">
+          <mxGeometry x="50" y="620" width="200" height="15" as="geometry" />
+        </mxCell>
+        <mxCell id="deps" value="&lt;font color=&quot;#555&quot; face=&quot;Courier New&quot; style=&quot;font-size:9px&quot;&gt;ESPAsyncWebServer 2.10.8 &amp;nbsp;|&amp;nbsp; PubSubClient 2.8 &amp;nbsp;|&amp;nbsp; ArduinoJson 7.4.2 &amp;nbsp;|&amp;nbsp; M5Unified + M5GFX &amp;nbsp;|&amp;nbsp; WireGuard-ESP32 &amp;nbsp;|&amp;nbsp; Sensirion I2C SCD4x &amp;nbsp;|&amp;nbsp; esp32ModbusRTU&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;arcSize=4;fillColor=#080808;strokeColor=#1A1A1A;fontColor=#555555;fontFamily=Barlow;fontSize=9;align=left;spacingLeft=10;verticalAlign=middle;" parent="1" vertex="1">
+          <mxGeometry x="50" y="640" width="660" height="30" as="geometry" />
+        </mxCell>
+
+        <!-- ===== Divider ===== -->
+        <mxCell id="divider" value="" style="line;strokeColor=#1A1A1A;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=left;points=[];portConstraint=eastwest;strokeWidth=1;" parent="1" vertex="1">
+          <mxGeometry x="750" y="95" width="1" height="600" as="geometry" />
+        </mxCell>
+
+        <!-- ===== RIGHT COLUMN: Docker Services ===== -->
+        <mxCell id="raspi-header" value="RASPBERRY PI 5 (IWADEV) — DOCKER SERVICES" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontColor=#555555;fontSize=11;fontStyle=1;fontFamily=Barlow;letterSpacing=3;" parent="1" vertex="1">
+          <mxGeometry x="790" y="95" width="500" height="20" as="geometry" />
+        </mxCell>
+
+        <!-- iwa-solar01 stack -->
+        <mxCell id="stack1-label" value="IWA-SOLAR01 — IOT DATA COLLECTION" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontColor=#444444;fontSize=10;fontFamily=Barlow;letterSpacing=2;" parent="1" vertex="1">
+          <mxGeometry x="790" y="120" width="400" height="15" as="geometry" />
+        </mxCell>
+        <mxCell id="d-mosquitto" value="&lt;b&gt;Mosquitto&lt;/b&gt; &lt;font color=&quot;#555&quot; face=&quot;Courier New&quot;&gt;eclipse-mosquitto :1883&lt;/font&gt;&lt;br&gt;&lt;font color=&quot;#707070&quot;&gt;MQTT Broker, anonymous auth&lt;/font&gt; &lt;font color=&quot;#444&quot;&gt;128MB&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;arcSize=6;fillColor=#0A0A0A;strokeColor=#555555;fontColor=#FFFFFF;fontFamily=Barlow;fontSize=10;align=left;spacingLeft=10;verticalAlign=top;spacingTop=6;" parent="1" vertex="1">
+          <mxGeometry x="790" y="140" width="400" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="d-nodered" value="&lt;b&gt;Node-RED&lt;/b&gt; &lt;font color=&quot;#555&quot; face=&quot;Courier New&quot;&gt;nodered/node-red :1880&lt;/font&gt;&lt;br&gt;&lt;font color=&quot;#707070&quot;&gt;MQTT → InfluxDB pipeline&lt;/font&gt; &lt;font color=&quot;#444&quot;&gt;512MB&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;arcSize=6;fillColor=#0A0A0A;strokeColor=#555555;fontColor=#FFFFFF;fontFamily=Barlow;fontSize=10;align=left;spacingLeft=10;verticalAlign=top;spacingTop=6;" parent="1" vertex="1">
+          <mxGeometry x="790" y="195" width="400" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="d-nginx" value="&lt;b&gt;Nginx esp-proxy&lt;/b&gt; &lt;font color=&quot;#555&quot; face=&quot;Courier New&quot;&gt;nginx:alpine :8080&lt;/font&gt;&lt;br&gt;&lt;font color=&quot;#707070&quot;&gt;WebUI proxy + OTA firmware&lt;/font&gt; &lt;font color=&quot;#444&quot;&gt;128MB&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;arcSize=6;fillColor=#0A0A0A;strokeColor=#333333;fontColor=#FFFFFF;fontFamily=Barlow;fontSize=10;align=left;spacingLeft=10;verticalAlign=top;spacingTop=6;" parent="1" vertex="1">
+          <mxGeometry x="790" y="250" width="400" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="d-udplog" value="&lt;b&gt;UDP Logger&lt;/b&gt; &lt;font color=&quot;#555&quot; face=&quot;Courier New&quot;&gt;custom :5555/udp&lt;/font&gt;&lt;br&gt;&lt;font color=&quot;#707070&quot;&gt;ESP32 debug log receiver&lt;/font&gt; &lt;font color=&quot;#444&quot;&gt;128MB&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;arcSize=6;fillColor=#0A0A0A;strokeColor=#333333;fontColor=#FFFFFF;fontFamily=Barlow;fontSize=10;align=left;spacingLeft=10;verticalAlign=top;spacingTop=6;" parent="1" vertex="1">
+          <mxGeometry x="790" y="305" width="400" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="d-tailscale" value="&lt;b&gt;Tailscale&lt;/b&gt; &lt;font color=&quot;#555&quot; face=&quot;Courier New&quot;&gt;tailscale/tailscale&lt;/font&gt;&lt;br&gt;&lt;font color=&quot;#707070&quot;&gt;VPN + subnet routing&lt;/font&gt; &lt;font color=&quot;#444&quot;&gt;256MB&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;arcSize=6;fillColor=#0A0A0A;strokeColor=#333333;fontColor=#FFFFFF;fontFamily=Barlow;fontSize=10;align=left;spacingLeft=10;verticalAlign=top;spacingTop=6;" parent="1" vertex="1">
+          <mxGeometry x="790" y="360" width="400" height="40" as="geometry" />
+        </mxCell>
+
+        <!-- iwa-core01 stack -->
+        <mxCell id="stack2-label" value="IWA-CORE01 — STORAGE &amp; VISUALIZATION" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontColor=#444444;fontSize=10;fontFamily=Barlow;letterSpacing=2;" parent="1" vertex="1">
+          <mxGeometry x="790" y="420" width="400" height="15" as="geometry" />
+        </mxCell>
+        <mxCell id="d-influxdb" value="&lt;b&gt;InfluxDB 1.8&lt;/b&gt; &lt;font color=&quot;#555&quot; face=&quot;Courier New&quot;&gt;influxdb:1.8 :8086&lt;/font&gt;&lt;br&gt;&lt;font color=&quot;#707070&quot;&gt;Time-series DB, CQ downsample&lt;/font&gt; &lt;font color=&quot;#444&quot;&gt;1536MB&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;arcSize=6;fillColor=#0A0A0A;strokeColor=#555555;fontColor=#FFFFFF;fontFamily=Barlow;fontSize=10;align=left;spacingLeft=10;verticalAlign=top;spacingTop=6;" parent="1" vertex="1">
+          <mxGeometry x="790" y="440" width="400" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="d-grafana" value="&lt;b&gt;Grafana 12.x&lt;/b&gt; &lt;font color=&quot;#555&quot; face=&quot;Courier New&quot;&gt;grafana/grafana :3000&lt;/font&gt;&lt;br&gt;&lt;font color=&quot;#707070&quot;&gt;7 dashboards, anonymous viewer&lt;/font&gt; &lt;font color=&quot;#444&quot;&gt;512MB&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;arcSize=6;fillColor=#0A0A0A;strokeColor=#555555;fontColor=#FFFFFF;fontFamily=Barlow;fontSize=10;align=left;spacingLeft=10;verticalAlign=top;spacingTop=6;" parent="1" vertex="1">
+          <mxGeometry x="790" y="495" width="400" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="d-telegraf" value="&lt;b&gt;Telegraf&lt;/b&gt; &lt;font color=&quot;#555&quot; face=&quot;Courier New&quot;&gt;telegraf:1.33-alpine&lt;/font&gt;&lt;br&gt;&lt;font color=&quot;#707070&quot;&gt;System metrics collection&lt;/font&gt; &lt;font color=&quot;#444&quot;&gt;512MB&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;arcSize=6;fillColor=#0A0A0A;strokeColor=#333333;fontColor=#FFFFFF;fontFamily=Barlow;fontSize=10;align=left;spacingLeft=10;verticalAlign=top;spacingTop=6;" parent="1" vertex="1">
+          <mxGeometry x="790" y="550" width="400" height="40" as="geometry" />
+        </mxCell>
+
+        <!-- Host Services -->
+        <mxCell id="host-label" value="HOST SERVICES (SYSTEMD)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontColor=#444444;fontSize=10;fontFamily=Barlow;letterSpacing=2;" parent="1" vertex="1">
+          <mxGeometry x="790" y="610" width="300" height="15" as="geometry" />
+        </mxCell>
+        <mxCell id="h-wg" value="&lt;b&gt;WireGuard wg0&lt;/b&gt;&lt;br&gt;&lt;font color=&quot;#707070&quot;&gt;VPN server, UDP:443&lt;br&gt;5 ESP32 peers&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;arcSize=6;fillColor=#080808;strokeColor=#222222;fontColor=#CCCCCC;fontFamily=Barlow;fontSize=10;align=left;spacingLeft=10;verticalAlign=top;spacingTop=6;" parent="1" vertex="1">
+          <mxGeometry x="790" y="630" width="165" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="h-ts" value="&lt;b&gt;Tailscaled&lt;/b&gt;&lt;br&gt;&lt;font color=&quot;#707070&quot;&gt;Host Tailscale&lt;br&gt;Developer remote access&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;arcSize=6;fillColor=#080808;strokeColor=#222222;fontColor=#CCCCCC;fontFamily=Barlow;fontSize=10;align=left;spacingLeft=10;verticalAlign=top;spacingTop=6;" parent="1" vertex="1">
+          <mxGeometry x="965" y="630" width="165" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="h-pmic" value="&lt;b&gt;collect-pmic&lt;/b&gt;&lt;br&gt;&lt;font color=&quot;#707070&quot;&gt;Timer 30s&lt;br&gt;Voltage/Current&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;arcSize=6;fillColor=#080808;strokeColor=#222222;fontColor=#CCCCCC;fontFamily=Barlow;fontSize=10;align=left;spacingLeft=10;verticalAlign=top;spacingTop=6;" parent="1" vertex="1">
+          <mxGeometry x="790" y="695" width="145" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="h-duck" value="&lt;b&gt;DuckDNS cron&lt;/b&gt;&lt;br&gt;&lt;font color=&quot;#707070&quot;&gt;5min update&lt;br&gt;Dynamic DNS&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;arcSize=6;fillColor=#080808;strokeColor=#222222;fontColor=#CCCCCC;fontFamily=Barlow;fontSize=10;align=left;spacingLeft=10;verticalAlign=top;spacingTop=6;" parent="1" vertex="1">
+          <mxGeometry x="945" y="695" width="145" height="55" as="geometry" />
+        </mxCell>
+
+        <!-- Data Flow -->
+        <mxCell id="dataflow-label" value="DATA FLOW" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontColor=#444444;fontSize=10;fontFamily=Barlow;letterSpacing=2;" parent="1" vertex="1">
+          <mxGeometry x="790" y="770" width="150" height="15" as="geometry" />
+        </mxCell>
+        <mxCell id="dataflow" value="&lt;font color=&quot;#CCCCCC&quot;&gt;Sensor → ESP32 → &lt;b&gt;MQTT&lt;/b&gt; → Node-RED → &lt;b&gt;InfluxDB&lt;/b&gt; → Grafana&lt;/font&gt;&lt;br&gt;&lt;font color=&quot;#555&quot;&gt;I2C/RS485/UART &amp;nbsp;&amp;nbsp; JSON serialize &amp;nbsp;&amp;nbsp; via WireGuard &amp;nbsp;&amp;nbsp; DEVICE_MAP &amp;nbsp;&amp;nbsp; raw_7d + rollup_10y &amp;nbsp;&amp;nbsp; 7 dashboards&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;arcSize=4;fillColor=#080808;strokeColor=#1A1A1A;fontColor=#CCCCCC;fontFamily=Barlow;fontSize=10;align=left;spacingLeft=10;verticalAlign=middle;" parent="1" vertex="1">
+          <mxGeometry x="790" y="790" width="530" height="45" as="geometry" />
+        </mxCell>
+
+        <!-- ===== Cross-column Edges ===== -->
+        <!-- MQTTManager → Mosquitto -->
+        <mxCell id="e-mqtt-mosq" value="&lt;font color=&quot;#707070&quot;&gt;MQTT PUBLISH&lt;/font&gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#555555;strokeWidth=1.5;fontFamily=Barlow;fontSize=9;fontColor=#707070;endArrow=blockThin;endFill=1;" parent="1" source="mqtt-mgr" target="d-mosquitto" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <!-- OTAManager → Nginx -->
+        <mxCell id="e-ota-nginx" value="&lt;font color=&quot;#555&quot;&gt;OTA HTTP&lt;/font&gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#333333;strokeWidth=1;dashed=1;dashPattern=4 3;fontFamily=Barlow;fontSize=9;fontColor=#555;endArrow=blockThin;endFill=1;" parent="1" source="ota-mgr" target="d-nginx" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <!-- Logger → UDP Logger -->
+        <mxCell id="e-log-udp" value="&lt;font color=&quot;#555&quot;&gt;UDP :5555&lt;/font&gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#333333;strokeWidth=1;dashed=1;dashPattern=4 3;fontFamily=Barlow;fontSize=9;fontColor=#555;endArrow=blockThin;endFill=1;" parent="1" source="logger" target="d-udplog" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <!-- WireGuardManager → WireGuard wg0 -->
+        <mxCell id="e-wgm-wg" value="&lt;font color=&quot;#555&quot;&gt;WG UDP :443&lt;/font&gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#333333;strokeWidth=1;dashed=1;dashPattern=4 3;fontFamily=Barlow;fontSize=9;fontColor=#555;endArrow=blockThin;endFill=1;" parent="1" source="wg-mgr" target="h-wg" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- Docker internal edges -->
+        <!-- Mosquitto → Node-RED -->
+        <mxCell id="e-mosq-nr" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#555555;strokeWidth=1;endArrow=blockThin;endFill=1;" parent="1" source="d-mosquitto" target="d-nodered" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <!-- Node-RED → InfluxDB -->
+        <mxCell id="e-nr-idb" value="&lt;font color=&quot;#707070&quot;&gt;HTTP WRITE&lt;/font&gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#555555;strokeWidth=1.5;fontFamily=Barlow;fontSize=9;fontColor=#707070;endArrow=blockThin;endFill=1;" parent="1" source="d-nodered" target="d-influxdb" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <!-- InfluxDB → Grafana -->
+        <mxCell id="e-idb-gf" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#555555;strokeWidth=1;endArrow=blockThin;endFill=1;" parent="1" source="d-influxdb" target="d-grafana" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <!-- Telegraf → InfluxDB -->
+        <mxCell id="e-tg-idb" value="&lt;font color=&quot;#555&quot;&gt;METRICS&lt;/font&gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#333333;strokeWidth=1;dashed=1;dashPattern=3 3;fontFamily=Barlow;fontSize=9;fontColor=#555;endArrow=blockThin;endFill=1;" parent="1" source="d-telegraf" target="d-influxdb" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- ESP32 internal: Sensor → MQTT (extends) -->
+        <mxCell id="e-sensor-mqtt" value="&lt;font color=&quot;#444&quot;&gt;JSON&lt;/font&gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#333333;strokeWidth=1;fontFamily=Barlow;fontSize=9;fontColor=#444;endArrow=blockThin;endFill=1;" parent="1" source="sensor-mgr" target="mqtt-mgr" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <!-- ConfigManager → ConfigManagerBase -->
+        <mxCell id="e-cfg-base" value="&lt;font color=&quot;#444&quot;&gt;extends&lt;/font&gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#222222;strokeWidth=1;dashed=1;dashPattern=3 3;fontFamily=Barlow;fontSize=8;fontColor=#444;endArrow=blockThin;endFill=1;" parent="1" source="config-mgr" target="config-base" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
