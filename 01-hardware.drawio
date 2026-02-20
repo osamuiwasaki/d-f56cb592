@@ -7,7 +7,7 @@
         <mxCell id="1" parent="0" />
 
         <!-- Font loader (Google Fonts) -->
-        <mxCell id="font-loader" value="&lt;style&gt;@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;700');&lt;/style&gt;" style="text;html=1;strokeColor=none;fillColor=none;fontColor=none;fontSize=1;movable=0;resizable=0;deletable=0;editable=0;connectable=0;" parent="1" vertex="1">
+        <mxCell id="font-loader" value="&lt;link rel=&quot;stylesheet&quot; href=&quot;https://fonts.googleapis.com/css2?family=Barlow:wght@400;700&quot;&gt;" style="text;html=1;strokeColor=none;fillColor=none;fontColor=none;fontSize=1;movable=0;resizable=0;deletable=0;editable=0;connectable=0;" parent="1" vertex="1">
           <mxGeometry x="0" y="0" width="1" height="1" as="geometry" />
         </mxCell>
 
