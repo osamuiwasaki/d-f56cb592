@@ -6,6 +6,11 @@
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
 
+        <!-- Font loader (Google Fonts) -->
+        <mxCell id="font-loader" value="&lt;style&gt;@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;700');&lt;/style&gt;" style="text;html=1;strokeColor=none;fillColor=none;fontColor=none;fontSize=1;movable=0;resizable=0;deletable=0;editable=0;connectable=0;" parent="1" vertex="1">
+          <mxGeometry x="0" y="0" width="1" height="1" as="geometry" />
+        </mxCell>
+
         <!-- Background fill (self-contained dark background) -->
         <mxCell id="bg" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#050505;strokeColor=none;movable=0;resizable=0;deletable=0;editable=0;connectable=0;" parent="1" vertex="1">
           <mxGeometry x="0" y="0" width="1400" height="900" as="geometry" />
