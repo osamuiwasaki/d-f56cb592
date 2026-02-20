@@ -6,6 +6,11 @@
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
 
+        <!-- Background fill (self-contained dark background) -->
+        <mxCell id="bg" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#050505;strokeColor=none;movable=0;resizable=0;deletable=0;editable=0;connectable=0;" parent="1" vertex="1">
+          <mxGeometry x="0" y="0" width="1400" height="900" as="geometry" />
+        </mxCell>
+
         <!-- Title -->
         <mxCell id="title" value="01 HARDWARE" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontColor=#FFFFFF;fontSize=24;fontStyle=1;fontFamily=Barlow;letterSpacing=4;" parent="1" vertex="1">
           <mxGeometry x="50" y="20" width="400" height="35" as="geometry" />
